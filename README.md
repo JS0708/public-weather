@@ -1,57 +1,15 @@
-# Weather Map Project
+# 🌤️ Weather Map Forecast Studio
 
-`Streamlit + FastAPI + SQLite3` 기반의 공공데이터포털 중기예보 지도 앱 프로젝트입니다.
+FastAPI와 Streamlit을 활용한 전국 중기예보 시각화 프로젝트입니다.
 
-## Stack
+## ✨ 주요 기능
+- **Interactive Map:** 전국 권역별 예보 상태를 색상으로 시각화
+- **Timeline Autoplay:** 날짜별 예보 변화를 애니메이션으로 확인
+- **Modern UI:** Glassmorphism 디자인 적용 및 다크 모드 지원
 
-- Frontend: Streamlit
-- Backend: FastAPI
-- Database: SQLite3
-- Environment / Package Manager: uv
-
-## Quick Start
-
-```bash
-uv sync
-uv run uvicorn backend.main:app --reload
-uv run streamlit run frontend/app.py
-```
-
-## Main Features
-
-- CSV to SQLite initial import
-- JWT register/login
-- Forecast CRUD API
-- Streamlit map dashboard with color-based forecast overlay
-- Docker compose for frontend and backend
-
-## Docker
-
-```bash
-docker compose up --build
-```
-
-- Frontend: http://localhost:8501
-- Backend: http://localhost:8000
-- Swagger: http://localhost:8000/docs
-
-## Structure
-
-```text
-.
-|-- backend/
-|   |-- api/
-|   |   `-- routes/
-|   |       `-- weather.py
-|   |-- core/
-|   |   `-- config.py
-|   |-- db/
-|   |   `-- database.py
-|   `-- main.py
-|-- frontend/
-|   |-- components/
-|   `-- app.py
-|-- data/
-|   `-- weather.db
-`-- pyproject.toml
-```
+## 🚀 시작하기
+1. **Backend 실행**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   uvicorn main:app --reload
